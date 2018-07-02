@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Content player</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <input id="addedFile" ion-input type="file" accept=".zip" #fileInput (change)="uploadFile($event)" >
+  <!--<button type="submit" ion-button>LOAD</button>-->
+  <iframe id="frame" name="frame" style="width: 100%; height: 100%"></iframe>
+  <ul>{{name}}
+  <li *ngFor="let file of files">{{file.name}}</li>
+  </ul>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Content
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    This is a perfect starting point for a page with primarily text content. The body is padded nicely and ready for prose.
+  </p>
+  <ul>
+    <li *ngFor="let item of items$ | async">
+      {{item.name}}
+      <a type="button" [href]="item.url" ion-button download>Download</a>
+    </li>
+  </ul>
+</ion-content>
