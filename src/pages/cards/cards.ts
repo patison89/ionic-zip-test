@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {File} from "@ionic-native/file";
 import { IonicPage, NavController } from 'ionic-angular';
 import * as JSZip from 'jszip';
 import * as JSZipUtils from 'jszip-utils';
@@ -14,13 +15,17 @@ export class CardsPage {
   name;
   files = [];
 
-  constructor(public navCtrl: NavController
+  constructor(public navCtrl: NavController,
+              private file: File
   ) {
 
 
   }
 
   async uploadFile(event) {
+    // let dir = await this.file.checkDir(this.file.externalDataDirectory + 'assets/folder', '');
+    // console.log('dir', dir);
+
     const files = [];
     const file = event.target.files[0];
     console.log(file);
